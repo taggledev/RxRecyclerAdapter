@@ -30,18 +30,19 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    api 'com.android.support:appcompat-v7:27.0.2'
+    api "com.android.support:appcompat-v7:$android_support_version"
+    api "com.android.support:design:$android_support_version"
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    api 'io.reactivex.rxjava2:rxkotlin:2.1.0'
-    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    api 'com.jakewharton.rxbinding2:rxbinding-kotlin:2.0.0'
-    api 'com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:2.0.0'
-    api 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:2.0.0'
-    api 'com.jakewharton.rxbinding2:rxbinding-design-kotlin:2.0.0'
+    api "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
+    api "io.reactivex.rxjava2:rxandroid:$rx_android_version"
+    api "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxbinding_version"
+    api "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxbinding_version"
+    api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxbinding_version"
+    api "com.jakewharton.rxbinding2:rxbinding-design-kotlin:$rxbinding_version"
 }
 
 repositories {
