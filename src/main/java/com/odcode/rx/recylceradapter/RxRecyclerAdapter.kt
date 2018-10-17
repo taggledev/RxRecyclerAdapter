@@ -1,6 +1,8 @@
 package com.odcode.rx.recylceradapter
 
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import io.reactivex.functions.Consumer
 
@@ -61,6 +63,7 @@ class RxRecyclerAdapter<D : RxRecyclerAdapterData> constructor(
 
     // FIXME: 임시
     interface Delegate<D : RxRecyclerAdapterData> {
+        fun inflate(parent: ViewGroup, layoutResId: Int): View = LayoutInflater.from(parent.context).inflate(layoutResId, parent, false)
         fun getItemViewType(position: Int, item: D): Int
         fun viewHolderForViewType(parent: ViewGroup, viewType: Int): RxRecyclerAdapterViewHolder<D>
     }
